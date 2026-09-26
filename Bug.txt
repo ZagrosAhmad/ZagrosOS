@@ -1,0 +1,5 @@
+Zagros Ahmad 
+Bug:
+after scroll screen i found newline color reset to white not green,
+and Problem with some bios interrupt used is dont exist at ibm pc or some pc
+come with 8086 cpu
