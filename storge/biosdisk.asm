@@ -1,10 +1,7 @@
 cpu 8086
 read_sector:
 	push ax
-	push di
 	push si
-	push bx
-	push dx
 	mov [count], ax
 	mov [adder], di
 	mov [adders], si
@@ -13,17 +10,11 @@ read_sector:
 	mov si, dap
 	int 0x13
 	pop ax
-	pop di
 	pop si
-	pop bx
-	pop dx
 	ret
 write_sector:
 	push ax
-	push di
 	push si
-	push bx
-	push dx
 	mov [count], ax
 	mov [adder], di
 	mov [adders], si
@@ -32,10 +23,7 @@ write_sector:
 	mov si, dap
 	int 0x13
 	pop ax
-	pop di
 	pop si
-	pop bx
-	pop dx
 	ret
 ALIGN 4
 dap:

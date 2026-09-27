@@ -26,6 +26,7 @@ step2:
     jmp 0x0000:0x1000       ; Jump to loaded payload
 
 disk_error:
+	jmp 0xffff:0x0000
     cli
     hlt                     ; Infinite loop on failure
 
@@ -33,7 +34,7 @@ align 4
 dap:
     db 0x10                 ; Packet size (16 bytes)
     db 0x00                 ; Reserved (always 0)
-    dw 2                    ; Number of sectors to read
+    dw 1                    ; Number of sectors to read
     dw 0x1000               ; Target buffer offset
     dw 0x0000               ; Target buffer segment
     dd 1                    ; Lower 32 bits of LBA sector
